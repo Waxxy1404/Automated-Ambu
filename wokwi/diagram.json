@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "author": "Ambu Automatizado - Projeto Academico",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -76.9,
+      "left": -249.4,
+      "attrs": { "value": "10k" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -144,
+      "left": 220.8,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": 163.2,
+      "left": -76.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-vcc",
+      "id": "vcc1",
+      "top": -172.8,
+      "left": -364.8,
+      "attrs": { "voltage": "5" }
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd1",
+      "top": -96,
+      "left": -364.8,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "vcc1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "gnd1:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "pot1:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v0" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "lcd1:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "lcd1:SDA", "uno:A4", "blue", [ "h0" ] ],
+    [ "lcd1:SCL", "uno:A5", "yellow", [ "h0" ] ],
+    [ "servo1:V+", "uno:5V", "red", [ "h0" ] ],
+    [ "servo1:GND", "uno:GND.3", "black", [ "h0" ] ],
+    [ "servo1:SIG", "uno:9", "orange", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
