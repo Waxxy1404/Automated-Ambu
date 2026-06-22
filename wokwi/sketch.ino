@@ -1,8 +1,3 @@
-/*
- * Simulação Wokwi — Ambu Automatizado (Protótipo Acadêmico)
- * Copie este arquivo para o editor Wokwi junto com diagram.json
- * Bibliotecas: LiquidCrystal I2C, Servo
- */
 
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
