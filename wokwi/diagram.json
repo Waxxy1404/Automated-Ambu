@@ -3,13 +3,7 @@
   "author": "Ambu Automatizado - Projeto Academico",
   "editor": "wokwi",
   "parts": [
-    {
-      "type": "wokwi-arduino-uno",
-      "id": "uno",
-      "top": 0,
-      "left": 0,
-      "attrs": {}
-    },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
     {
       "type": "wokwi-potentiometer",
       "id": "pot1",
@@ -20,17 +14,11 @@
     {
       "type": "wokwi-lcd1602",
       "id": "lcd1",
-      "top": -144,
-      "left": 220.8,
+      "top": -281.6,
+      "left": 264.8,
       "attrs": { "pins": "i2c" }
     },
-    {
-      "type": "wokwi-servo",
-      "id": "servo1",
-      "top": 163.2,
-      "left": -76.8,
-      "attrs": {}
-    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 439.6, "left": -144, "attrs": {} },
     {
       "type": "wokwi-vcc",
       "id": "vcc1",
@@ -38,11 +26,13 @@
       "left": -364.8,
       "attrs": { "voltage": "5" }
     },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": -96, "left": -364.8, "attrs": {} },
     {
-      "type": "wokwi-gnd",
-      "id": "gnd1",
-      "top": -96,
-      "left": -364.8,
+      "type": "wokwi-servo",
+      "id": "servo2",
+      "top": 275.6,
+      "left": -102.8,
+      "rotate": 180,
       "attrs": {}
     }
   ],
@@ -56,9 +46,13 @@
     [ "lcd1:GND", "uno:GND.2", "black", [ "h0" ] ],
     [ "lcd1:SDA", "uno:A4", "blue", [ "h0" ] ],
     [ "lcd1:SCL", "uno:A5", "yellow", [ "h0" ] ],
-    [ "servo1:V+", "uno:5V", "red", [ "h0" ] ],
-    [ "servo1:GND", "uno:GND.3", "black", [ "h0" ] ],
-    [ "servo1:SIG", "uno:9", "orange", [ "h0" ] ]
+    [ "servo1:V+", "uno:5V", "red", [ "h-9.6", "v96.1", "h313.6" ] ],
+    [ "servo1:GND", "uno:GND.3", "black", [ "h-19.2", "v86.4", "h342.2" ] ],
+    [ "servo1:SIG", "uno:9", "orange", [ "h0" ] ],
+    [ "uno:9", "servo1:PWM", "green", [ "v538.2", "h-307" ] ],
+    [ "servo2:PWM", "uno:9", "green", [ "h48", "v-75.8", "h47.8" ] ],
+    [ "servo2:V+", "vcc1:VCC", "red", [ "h28.8", "v-480.86" ] ],
+    [ "servo2:GND", "uno:GND.3", "black", [ "h111.8" ] ]
   ],
   "dependencies": {}
 }
